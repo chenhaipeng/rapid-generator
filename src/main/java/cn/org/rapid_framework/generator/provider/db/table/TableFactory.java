@@ -303,6 +303,16 @@ public class TableFactory {
 		}
 	}
 
+	/**
+	 *
+	 * @param table
+	 * @param primaryKeys
+	 * @param indices
+	 * @param uniqueIndices
+	 * @param uniqueColumns
+	 * @return
+	 * @throws SQLException
+	 */
 	private List getTableColumns(Table table, List primaryKeys, List indices, Map uniqueIndices, Map uniqueColumns) throws SQLException {
 		// get the columns
 		List columns = new LinkedList();
