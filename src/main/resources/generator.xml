@@ -28,7 +28,10 @@
     <entry key="skipTablePrefixes">ACT_,tmp_</entry>
 
     <entry key="gg.isOverride">true</entry>
-	
+
+	<!-- 需要忽略的模版 -->
+	<!--<entry key="generator.excludes">cncounter-manage</entry>-->
+
 	<!-- 数据库类型映射  -->
 	<entry key="java_typemapping.java.sql.Timestamp">Date</entry>
 	<entry key="java_typemapping.java.sql.Date">Date</entry>

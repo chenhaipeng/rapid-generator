@@ -1,5 +1,6 @@
 package cn.org.rapid_framework.generator.ext;
 
+import cn.org.rapid_framework.generator.util.AntPathMatcher;
 import cn.org.rapid_framework.generator.util.StringHelper;
 import org.junit.After;
 import org.junit.Before;
@@ -33,6 +34,14 @@ public class CommandLineTest {
 	 */
 	@Test
 	public void testMain() throws Exception {
+		String s = "/Users/hai/IdeaProjects/rapid-generator/template/cncounter-manage";
+		String templateFile = "/Users/hai/IdeaProjects/rapid-generator/template/*";
+
+//		if (new AntPathMatcher().match(s.replace('\\', '/'), templateFile)){
+//			System.out.println("true");
+//		}
+		System.out.println(new AntPathMatcher().match(templateFile,s));
+//		System.out.println(s.endsWith(","));
 	}
 
 	public static void main(String[] args) throws Exception {
