@@ -335,7 +335,7 @@ public class Generator {
 			for (String exclude : StringHelper.tokenizeToStringArray(excludes, ",")) {
 				if (new AntPathMatcher().match(exclude.replace('\\', '/'), templateFile)) return true;
 			}
-			//增加过滤模板条件
+			//增加过滤模板条件 chenhaipeng
 			for(String excludeConfig : StringHelper.tokenizeToStringArray(excludesConfig, ",")){
 //				if(StringHelper.contains(templateFile,excludeConfig)){
 //					return true;
