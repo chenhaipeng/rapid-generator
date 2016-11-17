@@ -141,7 +141,7 @@ public class Generator {
 	private void processTemplateRootDirs(Map templateModel,Map filePathModel,boolean isDelete) throws Exception {
 	    if(StringHelper.isBlank(getOutRootDir())) throw new IllegalStateException("'outRootDir' property must be not null.");
 		if(templateRootDirs.size() == 0) throw new IllegalStateException("'templateRootDirs' cannot empty");
-		GeneratorException ge = new GeneratorException("generator occer error, Generator BeanInfo:"+BeanHelper.describe(this));
+		GeneratorException ge = new GeneratorException("generator occur error, Generator BeanInfo:"+BeanHelper.describe(this));
 		for(int i = 0; i < this.templateRootDirs.size(); i++) {
 			File templateRootDir = (File)templateRootDirs.get(i);
 			List<Exception> exceptions = scanTemplatesAndProcess(templateRootDir,templateModel,filePathModel,isDelete);
@@ -149,7 +149,16 @@ public class Generator {
 		}
 		if(!ge.exceptions.isEmpty()) throw ge;
 	}
-	
+
+	/**
+	 *
+	 * @param templateRootDir
+	 * @param templateModel
+	 * @param filePathModel
+	 * @param isDelete
+	 * @return
+	 * @throws Exception
+	 */
 	private List<Exception> scanTemplatesAndProcess(File templateRootDir, Map templateModel,Map filePathModel,boolean isDelete) throws Exception {
 		if(templateRootDir == null) throw new IllegalStateException("'templateRootDir' must be not null");
 		GLogger.println("-------------------load template from templateRootDir = '"+templateRootDir.getAbsolutePath()+"' outRootDir:"+new File(outRootDir).getAbsolutePath());

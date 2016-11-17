@@ -1,10 +1,12 @@
 package cn.org.rapid_framework.generator;
 
-import org.junit.Test;
-import org.junit.Before;
 import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -273,28 +275,38 @@ public class GeneratorFacadeTest {
 	 */
 	@Test
 	public void testPrintBeginProcess() throws Exception {
-		//TODO: Test goes here...
+		Exception throwable = new RuntimeException("xxxxx");
+		List<Exception> list = new ArrayList<>();
+		list.add(throwable);
+
 	}
 
-	/** 生成器的上下文，存放的变量将可以在模板中引用 */
+	/**
+	 * 生成器的上下文，存放的变量将可以在模板中引用
+	 */
 	public static class GeneratorContext {
 		static ThreadLocal<Map> context = new ThreadLocal<Map>();
+
 		public static void clear() {
 			Map m = context.get();
-			if(m != null) m.clear();
+			if (m != null) m.clear();
 		}
+
 		public static Map getContext() {
 			Map map = context.get();
-			if(map == null) {
+			if (map == null) {
 				setContext(new HashMap());
 			}
 			return context.get();
 		}
+
 		public static void setContext(Map map) {
 			context.set(map);
 		}
-		public static void put(String key,Object value) {
+
+		public static void put(String key, Object value) {
 			getContext().put(key, value);
 		}
 	}
+
 } 
