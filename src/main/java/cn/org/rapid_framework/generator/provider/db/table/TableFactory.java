@@ -249,9 +249,9 @@ public class TableFactory {
 		// get the indices and unique columns
 		List indices = new LinkedList();
 		// maps index names to a list of columns in the index
-		Map<String,String> uniqueIndices = new HashMap();
+		Map<String, String> uniqueIndices = new HashMap();
 		// maps column names to the index name.
-		Map<String,List> uniqueColumns = new HashMap();
+		Map<String, List> uniqueColumns = new HashMap();
 		ResultSet indexRs = null;
 
 		try {
@@ -304,7 +304,6 @@ public class TableFactory {
 	}
 
 	/**
-	 *
 	 * @param table
 	 * @param primaryKeys
 	 * @param indices
@@ -417,6 +416,13 @@ public class TableFactory {
 			return nd == null ? new HashMap() : nd.attributes;
 		}
 
+		/**
+		 * 获取 table变量的属性自定义
+		 *
+		 * @param table  表
+		 * @param column 列变量
+		 * @return
+		 */
 		private static Map getColumnOverrideValues(Table table, Column column) {
 			NodeData root = getTableConfigXmlNodeData(table.getSqlName());
 			if (root != null) {
@@ -442,6 +448,22 @@ public class TableFactory {
 			return nd;
 		}
 
+		/**
+		 * <code>
+		 * <table sqlName="数据库表名" className="类名称" tableAlias="表的别名">
+		 * <column sqlName="数据库列名" columnAlias="列的别名" javaType="自定义javaType"
+		 * unique="是否唯一性约束" nullable="是否可以为空" pk="是否主键,在表没有主键的情况下,可以指定一个代理主键"
+		 * updatable="是否可以更新" insertable="是否插入"
+		 * enumString="枚举值,以分号分隔,示例值:M(1,男);F(0,女) 或者是:M(男);F(女)"
+		 * enumClassName="如果枚举有值,生成的类名称将是这个,没有枚举值，该配置无用.示例值:Sex"
+		 * hibernateValidatorExprssion="HibernateValidator表达式: @NotNull @Min(10) @Pattern(regex=, flag=)"
+		 * />
+		 * </table>
+		 * </code>
+		 *
+		 * @param tableSqlName
+		 * @return
+		 */
 		private static NodeData getTableConfigXmlNodeData0(String tableSqlName) {
 			try {
 				File file = FileHelper.getFileByClassLoader("generator_config/table/" + tableSqlName + ".xml");

@@ -404,4 +404,5 @@ public class Table {
 	public static final String FKTABLE_NAME = "FKTABLE_NAME";
 	public static final String FKCOLUMN_NAME = "FKCOLUMN_NAME";
 	public static final String KEY_SEQ = "KEY_SEQ";
+
 }
