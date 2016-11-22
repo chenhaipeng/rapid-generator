@@ -197,6 +197,16 @@ public class Generator {
 	private class TemplateProcessor {
 		private GeneratorControl gg = new GeneratorControl();
 
+		/**
+		 * 文件生成
+		 * @param templateRootDir
+		 * @param templateModel
+		 * @param filePathModel
+		 * @param srcFile
+		 * @throws SQLException
+		 * @throws IOException
+		 * @throws TemplateException
+		 */
 		private void executeGenerate(File templateRootDir, Map templateModel, Map filePathModel, File srcFile) throws SQLException, IOException, TemplateException {
 			String templateFile = FileHelper.getRelativePath(templateRootDir, srcFile);
 			if (GeneratorHelper.isIgnoreTemplateProcess(srcFile, templateFile, includes, excludes)) {
@@ -337,9 +347,6 @@ public class Generator {
 			}
 			//增加过滤模板条件 chenhaipeng
 			for(String excludeConfig : StringHelper.tokenizeToStringArray(excludesConfig, ",")){
-//				if(StringHelper.contains(templateFile,excludeConfig)){
-//					return true;
-//				}
 				if(templateFile.startsWith(excludeConfig)){
 					return true;
 				}
@@ -400,6 +407,12 @@ public class Generator {
 			return conf;
 		}
 
+		/**
+		 *  todo
+		 * @param templateName
+		 * @param suffix
+		 * @return
+		 */
 		public static List<String> getParentPaths(String templateName, String suffix) {
 			String array[] = StringHelper.tokenizeToStringArray(templateName, "\\/");
 			List<String> list = new ArrayList<String>();

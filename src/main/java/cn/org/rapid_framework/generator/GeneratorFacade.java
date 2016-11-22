@@ -237,7 +237,11 @@ public class GeneratorFacade {
 	
     @SuppressWarnings("all")
 	public static class GeneratorModelUtils {
-		
+		/**
+		 * 将
+		 * @param table
+		 * @return
+		 */
 		public static GeneratorModel newFromTable(Table table) {
 			Map templateModel = new HashMap();
 			templateModel.put("table", table);
