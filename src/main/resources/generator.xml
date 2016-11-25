@@ -6,6 +6,8 @@
 		1.会为所有的property生成property_dir属性,如pkg=com.company => pkg_dir=com/company
 		2.可以引用环境变量: ${env.JAVA_HOME} or System.properties: ${user.home},property之间也可以相互引用
 	</comment>
+
+	<entry key="author">chenhaipeng</entry>
 	
 	<entry key="basepackage">com.cncounter</entry>
 
