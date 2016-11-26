@@ -8,6 +8,7 @@ import java.util.Date;
 
 /**
  * ${table.remarks} entity
+ *
  * @version 1.0
  * @author ${author}
  * @date ${.now?string("yyyy-MM-dd HH:mm:ss")}

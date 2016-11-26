@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * ${table.remarks} DaoImpl
+ *
  * @version 1.0
  * @author ${author}
  * @date ${.now?string("yyyy-MM-dd HH:mm:ss")}

@@ -5,6 +5,7 @@ package ${basepackage}.service.${subpackage};
 
 /**
  * ${table.remarks} Service
+ *
  * @version 1.0
  * @author ${author}
  * @date ${.now?string("yyyy-MM-dd HH:mm:ss")}

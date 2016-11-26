@@ -9,6 +9,7 @@ import ${basepackage}.entity.${subpackage}.${className};
 
 /**
  * ${table.remarks} dao
+ *
  * @version 1.0
  * @author ${author}
  * @date ${.now?string("yyyy-MM-dd HH:mm:ss")}
