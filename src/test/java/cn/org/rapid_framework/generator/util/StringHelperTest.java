@@ -189,8 +189,16 @@ public class StringHelperTest {
 	 */ 
     @Test
     public void testToUnderscoreName() throws Exception { 
-        String s = StringHelper.makeAllWordFirstLetterUpperCase("person_name");
+//        String s = StringHelper.makeAllWordFirstLetterUpperCase("person_name");
+//		System.out.println(s);
+//
+//		String s2 = StringHelper.uncapitalize("j_user_info");
+//		System.out.println(s2);
+
+
+		String s = StringHelper.makeAllWordFirstLetterUpperCase(StringHelper.toUnderscoreName("j_user_info"));
 		System.out.println(s);
+
 	}
     
     /**

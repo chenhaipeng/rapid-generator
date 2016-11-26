@@ -1,22 +1,27 @@
 <#include "/macro.include"/>
-<#include "/java_copyright.include">
-<#assign className = table.className>   
+<#assign className = table.className>
 <#assign classNameLower = className?uncap_first> 
-package ${basepackage}.${subpackage}.model;
-
+package ${basepackage}.entity.${subpackage};
+import org.nutz.dao.entity.annotation.*;
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * ${table.tableAlias}
+ * ${table.remarks} entity
  * @version 1.0
  * @author ${author}
+ * @date ${.now?string("yyyy-MM-dd HH:mm:ss")}
  */
-
+@Table("${table.sqlName}")
 public class ${className} implements Serializable {
 
 	<#list table.columns as column>
+
 	// ${column.columnAlias}
+	<#if column.pk>
+	@Name
+	</#if>
+	@Column("${column.sqlName}")
 	private ${column.simpleJavaType} ${column.columnNameLower};
 	</#list>
 		

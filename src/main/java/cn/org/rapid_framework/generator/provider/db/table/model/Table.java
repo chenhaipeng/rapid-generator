@@ -22,6 +22,17 @@ public class Table {
 	String sqlName;
 	String remarks;
 	String className;
+	//第二个字符也变成大写
+	String classTab;
+
+	public String getClassTab() {
+		return classTab;
+	}
+
+	public void setClassTab(String classTab) {
+		this.classTab = classTab;
+	}
+
 	/**
 	 * the name of the owner of the synonym if this table is a synonym
 	 */

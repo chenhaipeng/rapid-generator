@@ -9,10 +9,10 @@
 
 	<entry key="author">chenhaipeng</entry>
 	
-	<entry key="basepackage">com.cncounter</entry>
+	<entry key="basepackage">com.jd.app</entry>
 
 	<!-- 子包,只支持单个词 -->
-	<entry key="subpackage">manage</entry>
+	<entry key="subpackage">user</entry>
 	
 	<!-- jsp namespace: web/${namespace}/${className}/list.jsp -->
 	<entry key="namespace">pages</entry>
@@ -32,7 +32,7 @@
     <entry key="gg.isOverride">true</entry>
 
 	<!-- 需要忽略的模版 -->
-	<!--<entry key="generator.excludes">cncounter-manage</entry>-->
+	<entry key="generator.excludes">cncounter-manage</entry>
 
 	<!-- 数据库类型映射  -->
 	<entry key="java_typemapping.java.sql.Timestamp">Date</entry>
@@ -48,10 +48,10 @@
 
 		
 	<!-- Mysql连接,useInformationSchema 取出表名注释 -->
-	<entry key="jdbc.url">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf8&amp;useInformationSchema=true</entry>
+	<entry key="jdbc.url">jdbc:mysql://192.168.23.132:3306/whfq_dev_jd?useUnicode=true&amp;characterEncoding=utf8&amp;useInformationSchema=true</entry>
 	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
 	<entry key="jdbc.username">root</entry>
-	<entry key="jdbc.password">root</entry>
+	<entry key="jdbc.password">123456</entry>
 
 	<!-- Oracle 	jdbc:oracle:oci:@tnsname_devdb
 	<entry key="jdbc.url">jdbc:oracle:thin:@192.168.0.177:1521:[sid]</entry>

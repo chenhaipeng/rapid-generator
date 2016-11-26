@@ -1,29 +1,21 @@
 <#include "/macro.include"/>
-<#include "/java_copyright.include">
-<#assign className = table.className>   
+<#assign className = table.className>
 <#assign classNameLower = className?uncap_first>
 <#assign shortName = table.shortName>
-package ${basepackage}.${subpackage}.dao.mysql;
+package ${basepackage}.dao.${subpackage}.impl
 
-import java.util.List;
-import java.util.Map;
-
+import com.jd.app.dao.base.BaseDaoImpl;
+import ${basepackage}.entity.${subpackage}.${className};
+import ${basepackage}.dao.${subpackage}.${className}Dao;
 import org.springframework.stereotype.Repository;
 
-import ${basepackage}.${subpackage}.model.${className};
-
+/**
+ * ${table.remarks} DaoImpl
+ * @version 1.0
+ * @author ${author}
+ * @date ${.now?string("yyyy-MM-dd HH:mm:ss")}
+ */
 @Repository
-public interface ${className}Mapper {
-    
-    ${className} getById(Integer id);
-    
-    int countBy(Map<String, Object> params);
+public interface ${className}DaoImpl BaseDaoImpl<${className}> implements ${className}Dao {
 
-    List<${className}> listPage(Map<String, Object> params);
-    
-    int insert(${className} ${classNameLower});
-    
-    int update(${className} ${classNameLower});
-    
-    int deleteById(Integer id);
 }
