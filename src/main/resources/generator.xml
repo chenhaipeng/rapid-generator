@@ -12,7 +12,7 @@
 	<entry key="basepackage">com.jd.app</entry>
 
 	<!-- 子包,只支持单个词 -->
-	<entry key="subpackage">user</entry>
+	<entry key="subpackage">userdata</entry>
 	
 	<!-- jsp namespace: web/${namespace}/${className}/list.jsp -->
 	<entry key="namespace">pages</entry>

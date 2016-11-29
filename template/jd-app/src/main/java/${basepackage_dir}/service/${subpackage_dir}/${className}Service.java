@@ -6,8 +6,8 @@ package ${basepackage}.service.${subpackage};
 /**
  * ${table.remarks} Service
  *
- * @version 1.0
  * @author ${author}
+ * @version 1.0
  * @date ${.now?string("yyyy-MM-dd HH:mm:ss")}
  */
 public interface ${className}Service {

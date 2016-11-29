@@ -2,7 +2,7 @@
 <#assign className = table.className>
 <#assign classNameLower = className?uncap_first>
 <#assign shortName = table.shortName>
-package ${basepackage}.dao.${subpackage}.impl
+package ${basepackage}.dao.${subpackage}.impl;
 
 import com.jd.app.dao.base.BaseDaoImpl;
 import ${basepackage}.entity.${subpackage}.${className};
@@ -17,6 +17,6 @@ import org.springframework.stereotype.Repository;
  * @date ${.now?string("yyyy-MM-dd HH:mm:ss")}
  */
 @Repository
-public interface ${className}DaoImpl BaseDaoImpl<${className}> implements ${className}Dao {
+public class  ${className}DaoImpl extends BaseDaoImpl<${className}> implements ${className}Dao {
 
 }
